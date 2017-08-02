@@ -1,0 +1,44 @@
+<div class="items">
+    <p>Items</p>
+    <form>
+        <div>
+            <input type="text" class="item-form" placeholder="Place name here.." ng-model="newItem"/>
+            <button type="button" class="btn btn-add" ng-click="$ctrl.addItem(newItem);newItem=''">Add new</button>
+            <div class="clear"></div>
+        </div>
+    </form>
+    <div class="item-list">
+        <div class="item" ng-repeat="item in $ctrl.items track by $index">
+            <div class="item-text" ng-class="{active : $ctrl.selected.id == item.id}" ng-click="$ctrl.showComments(item);$ctrl.select(item);"  >
+                <p><b>{{item.text}}</b> <span>{{item.comments.length}}</span></p>
+            </div>
+            <button type="button" class="btn btn-del" ng-click="$ctrl.delItem(item.id)">Delete</button>
+        </div>
+
+    </div>
+</div>
+
+<div class="comments" ng-show="$ctrl.comments">
+    <p>Comments</p>
+    <div class="comments-list">
+        <div class="comment" ng-repeat="comment in $ctrl.comments track by $index">
+            <div class="square"></div>
+            <div class="comment-text">
+                <p>{{ comment.text}}</p>
+            </div>
+            <div class="line"></div>
+        </div>
+        
+
+    </div>
+    <div class="clear"></div>
+    <div class="form-block">
+        <div class="square"></div>
+        <div class="comment-form">
+            <!-- magic here-->
+                <textarea class="item-form textarea-form " ng-model="$ctrl.textarea" ng-keydown="$event.key=='Enter' && $ctrl.addComment($ctrl.textarea)" value="q1321"></textarea>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+</div>

@@ -1,0 +1,215 @@
+html {
+    min-height: 100%; /* make sure it is at least as tall as the viewport */
+    position: relative;
+}
+
+body {
+    height: 100%; /* force the BODY element to match the height of the HTML element */
+}
+
+.main {
+    background: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.leftbar {
+    position:fixed;
+    background: #2B2F3E;
+    float: left;
+    top: 0;
+    bottom: 0;
+    width: 25%;
+    height: 100%;
+}
+
+.content {
+    overflow: auto;
+    background: #F9F9F9;
+    margin-left: 25%;
+    height: 100%;
+    padding: 2%;
+}
+
+.items {
+    background: #FFFFFF;
+    float: left;
+    width: 47%;
+    min-height: 60%;
+    margin-left: 1%;
+    margin-right: 1%;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.comments {
+    float: right;
+    background: #FFFFFF;
+    width: 48%;
+    min-height: 75%;
+    margin-right: 1%;
+    margin-left: 1%;
+    border: 1px solid black;
+}
+
+.clear {
+    clear: both;
+}
+
+.nav {
+    background-color: #FF3654;
+    color: white;
+    height: 8%;
+}
+
+p {
+    margin: 10%;
+}
+
+.navp {
+    padding: 6% 0% 5% 0%;
+}
+
+.item-form {
+    float: left;
+    display: block;
+    width: 60%;
+    height: 34px;
+    padding: 6px 12px;
+    margin-left: 3%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    -webkit-appearance: textfield;
+    -webkit-rtl-ordering: logical;
+    user-select: text;
+    cursor: auto;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    -webkit-writing-mode: horizontal-tb;
+}
+
+.btn {
+    float: right;
+    display: inline-block;
+    margin-right: 3%;
+}
+
+.btn-add {
+    background-color: #27CCC0;
+    color: #FFFFFF;
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+.btn-del {
+    background-color: #FFFFFF;
+    border: #FF6382 1px solid;
+    color: #FF6382;
+    margin: 5% 2% 5% 2%;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+}
+
+.item-text {
+    float: left;
+    width: 70%;
+}
+
+.item-list {
+    overflow: auto;
+}
+
+.comments-list {
+}
+
+.square {
+    background-color: #47568C;
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.comments-list {
+    width: 100%;
+    height: 65%;
+}
+
+.comment {
+    width: 100%;
+    height: 10%;
+}
+
+.comment-text {
+    float: right;
+    width: 75%;
+    font-size: 0.75em;
+    margin: -5% 0% -5% 0%;
+}
+
+
+
+div.line {
+    clear: both;
+    display: inline-block;
+    border-top: 1px solid black;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.comment-form {
+    margin: -5% 3% 10% -20%;
+    font-size: 0.75em;
+}
+
+.form-block {
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.textarea-form {
+    resize: none;
+    height: 50%;
+}
+
+
+p span {
+    background-color: lightseagreen;
+    padding: 3px 10px 3px 10px;
+    border-radius: 15px;
+}
+
+.form-block .square {
+    margin-top: 0%;
+}
+
+.main:first-child {
+    color: #525665;
+}
+
+.item {
+    overflow: auto;
+}
+
+.active {
+    border-left: solid 3px #FF2F5A;
+}
