@@ -4,7 +4,7 @@ var myApp = angular.module('myApp', []);
 
 myApp.
     component('itemComponent', {
-        templateUrl: 'view.html',
+        templateUrl: 'main.html',
         controller: function ItemsController() {
             self = this;
             self.textarea = '';
