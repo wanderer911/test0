@@ -10,7 +10,7 @@
     <div class="item-list">
         <div class="item" ng-repeat="item in $ctrl.items track by $index">
             <div class="item-text" ng-class="{active : $ctrl.selected.id == item.id}" ng-click="$ctrl.showComments(item);$ctrl.select(item);"  >
-                <p><b>{{item.text}}</b> <span>{{item.comments.length}}</span></p>
+                <p><b>{{item.text|limitTo:25}}{{item.text.length > 25?'...':''}}</b> <span>{{item.comments.length}}</span></p>
             </div>
             <button type="button" class="btn btn-del" ng-click="$ctrl.delItem(item.id)">Delete</button>
         </div>

@@ -4,10 +4,11 @@ var myApp = angular.module('myApp', []);
 
 myApp.
     component('itemComponent', {
-        templateUrl: 'main.html',
+        templateUrl: 'view.html',
         controller: function ItemsController() {
             self = this;
             self.textarea = '';
+            self.selected = null;
             self.items = JSON.parse(localStorage.getItem('items')) || [];
 
             self.addItem = function (item) {
@@ -23,7 +24,6 @@ myApp.
                 localStorage.setItem('items', JSON.stringify(self.items))
 
             };
-            self.selected = null;
 
             self.select = function (item) {
                 self.selected = item;
